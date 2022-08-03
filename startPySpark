@@ -20,3 +20,7 @@ os.environ["SPARK_HOME"] = f"/content/{spark_version}-bin-hadoop2.7"
 # Start a SparkSession
 import findspark
 findspark.init()
+
+# Start Spark session
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.appName("DataFrameBasics").getOrCreate()
